@@ -1,0 +1,115 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Swagger Faqstore
+  description: A sample API that uses a faqstore as an example to demonstrate features in the OpenAPI 3.0 specification
+  termsOfService: http://swagger.io/terms/
+  contact:
+    name: Swagger API Team
+    email: apiteam@swagger.io
+    url: http://swagger.io
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: http://faqstore.swagger.io/api
+paths:
+  /produto/compras:
+    get:
+      tags:
+        - FAQ
+      summary: Returns all faqs from the system that the user has access to
+      description: Returns all faqs from the system that the user has access to
+      operationId: listCompras
+      responses:
+        '200':
+          description: faq response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /produto/maior-compra/ano/{year}:
+    get:
+      tags:
+        - FAQ
+      summary: Returns a user based on a single ID, if the user does not have access to the faq
+      description: Returns a user based on a single ID, if the user does not have access to the faq
+      operationId: maiorCompraAno
+      parameters:
+        - name: year
+          in: path
+          description: ID of faq to fetch
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: faq response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Product:
+      allOf:
+        - $ref: '#/components/schemas/product'
+        - type: object
+    product:
+      type: object
+      properties:
+        id:
+          type: number
+        codigo:
+          type: string
+        data:
+          type: string
+        valorTotal:
+          type: number
+        cliente:
+          type: string
+        itens:
+          type: array
+          items:
+            type: object
+            properties:
+              produto:
+                type: string
+              pais:
+                type: string
+              categoria:
+                type: string
+              preco:
+                type: number
+              variedade:
+                type: string
+              safra:
+                type: number
+
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string

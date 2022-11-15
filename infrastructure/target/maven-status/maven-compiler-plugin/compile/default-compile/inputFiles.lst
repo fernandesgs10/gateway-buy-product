@@ -1,0 +1,6 @@
+/tmp/test/gateway-buy-product/infrastructure/src/main/java/br/com/gateway/buy/product/ramo/exchange/ClientExchange.java
+/tmp/test/gateway-buy-product/infrastructure/src/main/java/br/com/gateway/buy/product/ramo/router/ClientRouter.java
+/tmp/test/gateway-buy-product/infrastructure/src/main/java/br/com/gateway/buy/product/ramo/service/ProductService.java
+/tmp/test/gateway-buy-product/infrastructure/src/main/java/br/com/gateway/buy/product/ramo/service/ClientService.java
+/tmp/test/gateway-buy-product/infrastructure/src/main/java/br/com/gateway/buy/product/ramo/router/ProductRouter.java
+/tmp/test/gateway-buy-product/infrastructure/src/main/java/br/com/gateway/buy/product/ramo/exchange/ProductExchange.java

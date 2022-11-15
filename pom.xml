@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.gateway.buy.product</groupId>
+	<artifactId>gateway-buy-product</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<inceptionYear>2021</inceptionYear>
+	<description>API/Micro service</description>
+    <organization>
+        <name>IBM</name>
+        <url>https://www.ibm.com/br-pt</url>
+    </organization>
+
+	<modules>
+		<module>domain</module>
+		<module>infrastructure</module>
+		<module>application</module>
+	</modules>
+
+	<developers>
+	   <developer>
+		<id>FGS</id>
+		<name>Fernandes Silva</name>
+		<email>fernandes.silva.viaflow@ibm.com.br</email>
+		</developer>
+	</developers>
+
+	<properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <sonar.host.url>http://localhost:9000</sonar.host.url>
+   	  <sonar.login>admin</sonar.login>
+      <sonar.password>admin</sonar.password>
+	</properties>
+</project>
