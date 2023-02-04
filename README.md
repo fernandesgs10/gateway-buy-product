@@ -1,5 +1,5 @@
 Internet Services Architectures
-Project contains examples for Internet Services Architectures classes conducted to gateway project
+Project contains examples for Internet Services Architectures classes to gateway project
 
 
 Requirements
