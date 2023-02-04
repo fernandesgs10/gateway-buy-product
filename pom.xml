@@ -6,11 +6,11 @@
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
-	<inceptionYear>2021</inceptionYear>
+	<inceptionYear>2023</inceptionYear>
 	<description>API/Micro service</description>
     <organization>
-        <name>IBM</name>
-        <url>https://www.ibm.com/br-pt</url>
+        <name>FGS</name>
+        <url>https://www.fgs.com</url>
     </organization>
 
 	<modules>
@@ -23,7 +23,7 @@
 	   <developer>
 		<id>FGS</id>
 		<name>Fernandes Silva</name>
-		<email>fernandes.silva.viaflow@ibm.com.br</email>
+		<email>fernandesgs10@gmail.com</email>
 		</developer>
 	</developers>
 
