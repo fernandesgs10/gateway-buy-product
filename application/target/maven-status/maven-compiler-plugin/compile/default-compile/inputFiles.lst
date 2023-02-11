@@ -1,8 +1,0 @@
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/controller/ProductController.java
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/infrastructure/ProductExchangeImpl.java
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/MainApplication.java
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/infrastructure/ProductFileFromURL.java
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/mapper/ProductMapper.java
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/config/HandlerExceptionConfig.java
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/config/ConverterConfig.java
-/home/matrix-eniac/projects/project-generic-test/gateway-buy-product/application/src/main/java/br/com/gateway/buy/product/config/SwaggerConfig.java
