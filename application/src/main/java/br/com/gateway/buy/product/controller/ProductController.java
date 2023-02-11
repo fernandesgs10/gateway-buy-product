@@ -24,7 +24,7 @@ public class ProductController implements ProdutoApi {
     private final ProductService productService;
 
     @Override
-    @GetMapping(value = "/produto/maior-compra/ano/{year}", produces = {"application/json"})
+    @GetMapping(value = "/produto/maior-compra/ano/{year}")
     public ResponseEntity<List<Product>>  maiorCompraAno(Integer year) {
         var productEntityList = productService.productsMajorBuyYear(year);
         var listProduct = productEntityList.stream()
@@ -33,7 +33,7 @@ public class ProductController implements ProdutoApi {
     }
 
     @Override
-    @GetMapping(value = "/produto/compras", produces = {"application/json"})
+    @GetMapping(value = "/produto/compras")
     public ResponseEntity<List<Product>> listCompras() {
         List<ProductEntity> productEntityList = productService.productBuys();
         List<Product> listProduct = productEntityList.stream()
