@@ -11,18 +11,18 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+@SuppressWarnings("ALL")
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
 
 	@Bean
 	public Docket newsApi() {
-		Docket docket = new Docket(DocumentationType.SWAGGER_2)
+		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("br.com.gateway.buy.product.segmento"))
 				.paths(PathSelectors.any()).build()
 				.apiInfo(apiEndPointsInfo());
-		return docket;
 	}
 
 	private ApiInfo apiEndPointsInfo() {

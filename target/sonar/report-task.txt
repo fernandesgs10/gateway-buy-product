@@ -1,0 +1,6 @@
+projectKey=br.com.gateway.buy.product:gateway-buy-product
+serverUrl=http://localhost:9000
+serverVersion=9.9.0.65466
+dashboardUrl=http://localhost:9000/dashboard?id=br.com.gateway.buy.product%3Agateway-buy-product
+ceTaskId=AYY-PyUOUMakndzQIROY
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYY-PyUOUMakndzQIROY

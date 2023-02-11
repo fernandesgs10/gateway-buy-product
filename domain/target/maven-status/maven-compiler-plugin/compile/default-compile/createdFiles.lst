@@ -1,0 +1,15 @@
+br/com/gateway/buy/product/common/FinnetConnectException.class
+br/com/gateway/buy/product/api/ProdutoApi.class
+br/com/gateway/buy/product/api/ApiUtil.class
+br/com/gateway/buy/product/entity/ProductEntity.class
+br/com/gateway/buy/product/repository/ProductRepository.class
+br/com/gateway/buy/product/common/MessageHandler$MessageHandlerBuilder.class
+br/com/gateway/buy/product/entity/ItemsEntity.class
+br/com/gateway/buy/product/repository/ItemsRepository.class
+br/com/gateway/buy/product/api/Error.class
+br/com/gateway/buy/product/dto/ProdutoDto.class
+br/com/gateway/buy/product/enums/ProductRouterEnum.class
+br/com/gateway/buy/product/common/MessageHandler.class
+br/com/gateway/buy/product/api/ProductItens.class
+br/com/gateway/buy/product/dto/ItenDto.class
+br/com/gateway/buy/product/api/Product.class

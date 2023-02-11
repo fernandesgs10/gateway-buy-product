@@ -1,0 +1,9 @@
+br/com/gateway/buy/product/infrastructure/ProductExchangeImpl.class
+br/com/gateway/buy/product/mapper/ProductMapper.class
+br/com/gateway/buy/product/config/SwaggerConfig.class
+br/com/gateway/buy/product/mapper/ProductMapper$ProductMapperBuilder.class
+br/com/gateway/buy/product/config/HandlerExceptionConfig.class
+br/com/gateway/buy/product/infrastructure/ProductFileFromURL.class
+br/com/gateway/buy/product/config/ConverterConfig.class
+br/com/gateway/buy/product/MainApplication.class
+br/com/gateway/buy/product/controller/ProductController.class

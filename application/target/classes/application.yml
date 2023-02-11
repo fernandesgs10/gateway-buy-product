@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: gateway-buy-product
+
+  main:
+    allow-bean-definition-overriding: true
+
+  banner:
+    location: classpath:/banner.txt
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+    datasource:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:testdb
+      username: sa
+      password:
+
+    jpa:
+      hibernate:
+        ddl-auto: create
+      show-sql: true
+      database-platform: org.hibernate.dialect.H2Dialect
+      open-in-view: false
+      generate-ddl: true
+
+server:
+  port: 8082

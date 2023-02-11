@@ -10,17 +10,13 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Builder
 @Data
+@Builder
 public class ProductMapper implements Serializable {
 
-    private static ModelMapper modelMapper;
-
     public static List<ProductEntity> converterProductEntity(List<ProdutoDto> produtoDto) {
-        modelMapper = new ModelMapper();
-        var listProduct = produtoDto.stream()
+        ModelMapper modelMapper = new ModelMapper();
+        return produtoDto.stream()
                 .map(item -> modelMapper.map(item, ProductEntity.class)).collect(Collectors.toList());
-
-        return listProduct;
     }
 }

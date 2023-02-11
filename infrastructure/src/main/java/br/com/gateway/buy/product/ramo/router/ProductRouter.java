@@ -1,24 +1,22 @@
 package br.com.gateway.buy.product.ramo.router;
 
+import br.com.gateway.buy.product.enums.ProductRouterEnum;
 import br.com.gateway.buy.product.ramo.exchange.ProductExchange;
 import lombok.AllArgsConstructor;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Service;
 
-@AllArgsConstructor
 @Service
+@AllArgsConstructor
 public class ProductRouter {
 
     private final ProductExchange productExchange;
-
-    public static final String ROUTE_PRODUCTS_MAJOR_BUY_YEAR = "direct:productsMajorBuyYear";
-    public static final String ROUTE_PRODUCTS_BUYS = "direct:productBuys";
 
     public RouteBuilder createRouterProductsMajorBuyYear() {
         return new RouteBuilder() {
             @Override
             public void configure() {
-                from(ROUTE_PRODUCTS_MAJOR_BUY_YEAR)
+                from(ProductRouterEnum.ROUTE_PRODUCTS_MAJOR_BUY_YEAR.getName())
                         .bean(productExchange, "productsMajorBuyYear");
             }
         };
@@ -28,7 +26,7 @@ public class ProductRouter {
         return new RouteBuilder() {
             @Override
             public void configure() {
-                from(ROUTE_PRODUCTS_BUYS)
+                from(ProductRouterEnum.ROUTE_PRODUCTS_BUYS.getName())
                         .bean(productExchange, "productBuys");
             }
         };

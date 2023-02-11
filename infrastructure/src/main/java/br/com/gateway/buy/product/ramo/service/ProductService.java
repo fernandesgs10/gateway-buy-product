@@ -1,9 +1,8 @@
 package br.com.gateway.buy.product.ramo.service;
 
 import br.com.gateway.buy.product.common.FinnetConnectException;
-import br.com.gateway.buy.product.entity.ItemsEntity;
 import br.com.gateway.buy.product.entity.ProductEntity;
-import br.com.gateway.buy.product.ramo.router.ClientRouter;
+import br.com.gateway.buy.product.enums.ProductRouterEnum;
 import br.com.gateway.buy.product.ramo.router.ProductRouter;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,15 +27,14 @@ public class ProductService {
             ctx.start();
 
             try (ProducerTemplate producerTemplate = ctx.createProducerTemplate()) {
-                return producerTemplate.requestBody(productRouter.ROUTE_PRODUCTS_MAJOR_BUY_YEAR, year, List.class);
+                return producerTemplate.requestBody(ProductRouterEnum.ROUTE_PRODUCTS_MAJOR_BUY_YEAR.getName(), year, List.class);
             }
         } catch (Exception ex) {
             log.error(ex.getMessage(), ex);
             if (ex.getCause() != null) {
                 Throwable cause = ex.getCause();
                 if (cause instanceof HttpClientErrorException.BadRequest) {
-                    HttpClientErrorException.BadRequest bd = (HttpClientErrorException.BadRequest) cause;
-                    throw bd;
+                    throw (HttpClientErrorException.BadRequest) cause;
                 }
             }
             throw new FinnetConnectException(ex.getMessage());
@@ -50,15 +48,14 @@ public class ProductService {
 
             try (ProducerTemplate producerTemplate = ctx.createProducerTemplate()) {
                 return producerTemplate.
-                        requestBody(productRouter.ROUTE_PRODUCTS_BUYS, null, List.class);
+                        requestBody(ProductRouterEnum.ROUTE_PRODUCTS_BUYS.getName(), null, List.class);
             }
         } catch (Exception ex) {
             log.error(ex.getMessage(), ex);
             if (ex.getCause() != null) {
                 Throwable cause = ex.getCause();
                 if (cause instanceof HttpClientErrorException.BadRequest) {
-                    HttpClientErrorException.BadRequest bd = (HttpClientErrorException.BadRequest) cause;
-                    throw bd;
+                    throw (HttpClientErrorException.BadRequest) cause;
                 }
             }
             throw new FinnetConnectException(ex.getMessage());

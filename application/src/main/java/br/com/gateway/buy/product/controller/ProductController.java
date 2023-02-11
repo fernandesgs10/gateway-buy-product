@@ -8,8 +8,8 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class ProductController implements ProdutoApi {
     private final ProductService productService;
 
     @Override
-    @RequestMapping(value = "/produto/maior-compra/ano/{year}", produces = {"application/json"}, method = RequestMethod.GET)
+    @GetMapping(value = "/produto/maior-compra/ano/{year}", produces = {"application/json"})
     public ResponseEntity<List<Product>>  maiorCompraAno(Integer year) {
         var productEntityList = productService.productsMajorBuyYear(year);
         var listProduct = productEntityList.stream()
@@ -33,7 +33,7 @@ public class ProductController implements ProdutoApi {
     }
 
     @Override
-    @RequestMapping(value = "/produto/compras", produces = {"application/json"}, method = RequestMethod.GET)
+    @GetMapping(value = "/produto/compras", produces = {"application/json"})
     public ResponseEntity<List<Product>> listCompras() {
         List<ProductEntity> productEntityList = productService.productBuys();
         List<Product> listProduct = productEntityList.stream()

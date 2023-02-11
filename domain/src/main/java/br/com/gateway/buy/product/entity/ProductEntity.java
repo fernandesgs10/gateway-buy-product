@@ -2,7 +2,6 @@ package br.com.gateway.buy.product.entity;
 
 import lombok.Data;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.List;
@@ -36,9 +34,6 @@ public class ProductEntity implements Serializable {
 
     @Column(name = "CLIENTE")
     private String cliente;
-
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private ClientEntity clientEntity;
 
     @OneToMany(mappedBy = "productEntity", fetch = FetchType.LAZY)
     private List<ItemsEntity> itens;

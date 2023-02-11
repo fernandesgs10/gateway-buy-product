@@ -25,8 +25,7 @@ public class ProductExchangeImpl implements ProductExchange {
     private static List<ProductEntity> listProductEntity() {
         ProdutoDto[] productDto = ProductFileFromURL.downloadProduct();
         List<ProdutoDto> listProdutoDto = Arrays.asList(productDto);
-        List<ProductEntity> listProductEntity = ProductMapper.converterProductEntity(listProdutoDto);
-        return listProductEntity;
+        return ProductMapper.converterProductEntity(listProdutoDto);
     }
 
     @Override
